@@ -1,0 +1,25 @@
+body {
+    margin: 0 ;
+    font-family: sans-serif;
+    background-color: hsl(0, 23%, 91%);
+    
+  }
+  h1 {
+    
+    text-align: center;
+    margin-top: 50px;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="text"] {
+    width: 100
+  } 
