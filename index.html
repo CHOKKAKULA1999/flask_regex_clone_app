@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Regex Tester</title>
+    <style>
+        body {
+            background-image: url(
+    "https://dme2wmiz2suov.cloudfront.net/User(4778996)/CourseBundles(17897)/1608817-DataScience_Logo_IRL.jpg");
+      
+    background_size : cover;
+    background-repeat : repeat -y;
+
+        }
+         
+        h1,
+        h3 {
+            color: green;
+        }
+         
+        body {
+            text-align: left;
+        }
+        </style>
+
+   
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+  <body  >
+   
+    
+    <h1>Regex Tester</h1>
+    <form method="post" action="/">
+      <label for="string">INPUT STRING </label>
+      <input type="text" name="string" id="string">
+      <label for="regex">ENTER EXPRESSION TO CHECK</label>
+      <input type="text" name="regex" id="regex">
+      <button type="submit">Test</button>
+    </form>
+    {% if matches %}
+         <h2>THE MATCHING EXPRESSIONS ARE </h2>
+         <ul>
+            {% for a in matches %}
+            <li> {{a}} </li>
+            
+            {% endfor %}
+            <h2> TOTAL MATCHING COUNT IS GIVEN BELOW <h2>
+            <li> {{count_total}}<li>
+         </ul>
+    {% endif%}
+
+  </body>
+</html>
